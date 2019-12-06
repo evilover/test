@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div>
+      <h2>标题</h2>
+      <p>{{headerListData}}</p>
+    </div>
+    
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
@@ -14,7 +17,25 @@ import HelloWorld from './components/HelloWorld.vue';
     HelloWorld,
   },
 })
+
+
 export default class App extends Vue {}
+
+
+
+// export default {
+//   name:"App",
+//     data() {
+//     return {
+//       IsRouterAlive: true,
+//       headerListData: "hahhahaha",
+//       router: false
+//     };
+//   },
+//   methods:{
+
+//   }
+// }
 </script>
 
 <style lang="less">
